@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border: 2px solid #adaeae;
+  background: transparent;
+}
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+  height: 8px;
+  width: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 100%;
+  border: 2px solid black;
+}
