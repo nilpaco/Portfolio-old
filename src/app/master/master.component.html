@@ -1,10 +1,13 @@
-<div>
-  <div class="aside-left">
-    <h1>Adriana Rius</h1>
+<div class="nav">
+  <div class="inner-nav">
+  <div class="nav-left">
+    <span>Adriana Rius!</span>
   </div>
-  <div class="aside-right">
-    <img class="social" src="../../assets/Twitter_Logo_Blue.png" />
-    <img class="social" src="../../assets/dribbble-ball-1col-dnld-e29e0436f93d2f9c430fde5f3da66f94493fdca66351408ab0f96e2ec518ab17.png" />
+  <div class="nav-right">
+    <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+    <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+    <span><i class="fa fa-behance" aria-hidden="true"></i></span>
+  </div>
   </div>
 </div>
 
@@ -13,114 +16,53 @@
      [mnFullpageKeyboardScrolling]="true"
      [mnFullpageSlidesNavigation]="true"
      [mnFullpageSlidesNavPosition]="bottom">
-
   <div class="section welcome-section fp-section fp-table">
     <div class="fp-tableCell">
-      <h1>Angular 2 fullPage.js</h1>
-      <h4>Create Beautiful Fullscreen Scrolling Websites (now with Angular 2)!</h4>
-      <img class="logo-image" src="https://raw.githubusercontent.com/meiblorn/ng2-fullpage/develop/logo.png"/>
+      <div class="left">
+        <div class="container">
+          <div class="content">
+            <a class="ajax" data-direction="from-right" href="http://nicolas-bussiere.com/projects/smcp" data-project="smcp">
+              <h2>Project title here</h2>
+              <span class="caption">type of work</span>
+              <span class="arrow"><span class="inner"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="illustrations-container">
+        <div class="illustration">
+          <div class="illustration-inner to-load loaded" style="background-color:#f4f4f4;"><span style="background-image: url(https://s3.amazonaws.com/data.tackk.com/mio/26357928/13907916085242/large.jpg);"></span></div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="section install-section fp-section fp-table">
     <div class="fp-tableCell">
-      <h1>Easy to install !</h1>
-      <div class="code-block">
-            <pre>
-                <code class="bash">{{templates.install}}</code>
-            </pre>
+      <div class="left">
+        <div class="container">
+          <div class="content">
+            <a class="ajax" data-direction="from-right" href="http://nicolas-bussiere.com/projects/smcp" data-project="smcp">
+              <h2>Project title here</h2>
+              <span class="caption">type of work</span>
+              <span class="arrow"><span class="inner"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="illustrations-container">
+        <div class="illustration">
+          <div class="illustration-inner to-load loaded" style="background-color:#f4f4f4;"><span style="background-image: url(https://s3.amazonaws.com/data.tackk.com/mio/26357928/13907916085242/large.jpg);"></span></div>
+        </div>
       </div>
     </div>
   </div>
   <div class="section install-section fp-section fp-table">
     <div class="fp-tableCell">
-      <h1>Easy to install !</h1>
-      <div class="code-block">
-            <pre>
-                <code class="bash">{{templates.install}}</code>
-            </pre>
-      </div>
+      <ul>
+        <li class="text" *ngFor="let item of items | async">
+          {{item.text}}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
-  <!--
-  <div class="section usage-section fp-section fp-table">
-    <div class="fp-tableCell">
-      <div class="slide">
-        <h1>Easy to use !</h1>
-        <h4>Use keyboard arrows or navigation below to slide right</h4>
-      </div>
-      <div class="slide">
-        <h1>Declare it in your module</h1>
-        <div class="code-block">
-                <pre>
-                    <code class="javascript">{{templates.usage.slides.module}}</code>
-                </pre>
-        </div>
-      </div>
-      <div class="slide">
-        <h1>Now use it in your html template</h1>
-        <div class="code-block">
-                <pre>
-                    <code class="html">{{templates.usage.slides.html}}</code>
-                </pre>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section slides-section fp-section fp-table">
-    <div class="fp-tableCell">
-      <div class="slide">
-        <h1>Many ways to configure!</h1>
-        <h4>Use keyboard arrows or navigation below to slide right</h4>
-      </div>
-      <div class="slide">
-        <h1>Configure it via attributes</h1>
-        <div class="code-block">
-                <pre>
-                    <code class="html">{{templates.configuration.slides.attributes}}</code>
-                </pre>
-        </div>
-      </div>
-      <div class="slide">
-        <h1>Use configuration object instead</h1>
-        <div class="code-block">
-                <pre>
-                    <code class="javascript">{{templates.configuration.slides.classOptions}}</code>
-                </pre>
-        </div>
-      </div>
-      <div class="slide">
-        <h1>Or MIX IT !</h1>
-        <div class="code-block">
-                <pre>
-                    <code class="javascript">{{templates.configuration.slides.mix}}</code>
-                </pre>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section usage-section fp-section fp-table">
-    <div class="fp-tableCell">
-      <h1>Get full control on the page !</h1>
-      <div class="code-block">
-            <pre>
-                <code class="html">{{templates.service}}</code>
-            </pre>
-      </div>
-      <div>
-        <button (click)="fullpageService.moveSectionUp();">Move section up</button>
-        <button (click)="fullpageService.moveSectionDown();">Move section down</button>
-      </div>
-    </div>
-  </div>
-  <div class="section start-use-it-now-section fp-section fp-table">
-    <div class="fp-tableCell">
-      <h1>Start use it now!</h1>
-      <h4>
-        Return to <a href="https://github.com/meiblorn/ng2-fullpage">GitHub</a>
-        or start reading <a href="docs/index.html">docs</a>
-      </h4>
-    </div>
-  </div>
-</div>
--->
