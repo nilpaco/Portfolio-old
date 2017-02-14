@@ -141,3 +141,13 @@ i {
     flex: 0 1 100%;
    text-align: center;
 }
+
+@media (max-width: 768px) {
+  .item {
+    height: 25%;
+    width: 100%;
+  }
+  .text {
+    display: none;
+  }
+}
