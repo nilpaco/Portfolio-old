@@ -112,8 +112,11 @@ i {
 }
 .items {
     height: 100%;
-    width: 100%;
     display: block;
+    padding-top: 79px;
+    padding-bottom: 79px;
+    padding-right: 45px;
+    padding-left: 45px;
 }
 .item {
     background-color: red;
