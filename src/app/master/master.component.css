@@ -75,9 +75,9 @@ i {
 .illustrations-container {
   position: absolute;
   display: block;
-  top: 45px;
+  top: 79px;
   right: 45px;
-  bottom: 45px;
+  bottom: 79px;
   left: 50%;
   overflow: hidden;
   z-index: 2;
