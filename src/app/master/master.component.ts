@@ -10,6 +10,10 @@ export class MasterComponent {
   items: FirebaseListObservable<any[]>;
 
   constructor(af: AngularFire) {
-    this.items = af.database.list('/projects');
+    this.items = af.database.list('/projects', {
+      query: {
+        limitToLast: 4
+      }
+    });
   }
 }

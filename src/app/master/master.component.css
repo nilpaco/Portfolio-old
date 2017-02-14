@@ -28,10 +28,10 @@ i {
 }
 .left {
   position: absolute;
-  top: 45px;
+  top: 79px;
   right: 50%;
-  bottom: 45px;
-  left: 180px;
+  bottom: 79px;
+  left: 45px;
 }
 .container {
   display: table;
@@ -119,8 +119,6 @@ i {
     padding-left: 45px;
 }
 .item {
-    background-color: red;
-    border: 1px solid black;
     height: 50%;
     width: 50%;
     position: relative;
@@ -129,11 +127,17 @@ i {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 15px;
   }
   .content {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: red;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 .flex {
     display: flex;

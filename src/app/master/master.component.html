@@ -36,46 +36,13 @@
   <div class="section install-section fp-section fp-table">
     <div class="fp-tableCell">
       <div class="items">
-        <div class="item">
-          <div class="content">
+        <div class="item" *ngFor="let item of items | async">
+          <div class="content" [ngStyle]="{'background-image': 'url(' + item.img + ')'}">
             <div class="flex">
               <div>
-                <h1>Title</h1>
+                <h1>{{item.title}}</h1>
               </div>
-              <div class="text">Hello this is a long test sentence this </div>
-              <div>Arrow</div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="content">
-            <div class="flex">
-              <div>
-                <h1>Title</h1>
-              </div>
-              <div class="text">Hello this is a long test sentence this </div>
-              <div>Arrow</div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="content">
-            <div class="flex">
-              <div>
-                <h1>Title</h1>
-              </div>
-              <div class="text">Hello this is a long test sentence this </div>
-              <div>Arrow</div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="content">
-            <div class="flex">
-              <div>
-                <h1>Title</h1>
-              </div>
-              <div class="text">Hello this is a long test sentence this </div>
+              <div class="text">{{item.subtitle}}</div>
               <div>Arrow</div>
             </div>
           </div>
@@ -85,11 +52,7 @@
     </div>
   <div class="section install-section fp-section fp-table">
     <div class="fp-tableCell">
-      <ul>
-        <li class="text" *ngFor="let item of items | async">
-          {{item.text}}
-        </li>
-      </ul>
+        <h1>About me</h1>
     </div>
   </div>
   </div>
