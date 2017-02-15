@@ -7,6 +7,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   styleUrls: ['./master.component.css']
 })
 export class MasterComponent {
+
   items: FirebaseListObservable<any[]>;
 
   constructor(af: AngularFire) {

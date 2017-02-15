@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { MasterComponent } from './master/master.component';
+import { AppRoutingModule } from './app-routing.module';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDghV4zUgHAK6fg7waocCDyLy7PzAYhJMU',
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AppRoutingModule
   ],
   providers: [
     MnFullpageService
