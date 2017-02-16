@@ -36,15 +36,17 @@
     <div class="fp-tableCell">
       <div class="items">
         <div class="item" *ngFor="let item of items | async">
+          <a [routerLink]="['/detail', item.$key]">
           <div class="content" [ngStyle]="{'background-image': 'url(' + item.img + ')'}">
             <div class="flex">
               <div>
-                <h1>{{item.title}}</h1><a [routerLink]="['/detail', item.$key]">{{item.title}}</a>
+                <h1>{{item.title}}</h1>
               </div>
               <div class="text">{{item.subtitle}}</div>
               <div>Arrow</div>
             </div>
           </div>
+          </a>
         </div>
       </div>
     </div>
