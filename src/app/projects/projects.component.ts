@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MnFullpageService } from 'ng2-fullpage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fullpageService: MnFullpageService, private router: Router) { }
 
   ngOnInit() {
+    if (this.router.navigated) {
+      this.fullpageService.destroy('all');
+    }
   }
 
 }
