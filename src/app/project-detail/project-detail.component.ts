@@ -22,6 +22,7 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+      // TODO Fix this if, only enter the block if previous route is home ("/")    
       if (this.router.navigated) {
         this.fullpageService.destroy('all');
       }

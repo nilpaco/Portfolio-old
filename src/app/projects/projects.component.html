@@ -1,3 +1,41 @@
-<p>
-  projects works!
-</p>
+
+<div class="columns">
+  <div class="column">
+    <a class="button">asdf</a>
+  </div>
+</div>
+<div class="container" style="max-width: 600px; margin: 0 auto;">
+  <section class="hero" *ngFor="let item of items | async">
+    <div class="hero-body">
+      <div class="container has-text-left">
+        <figure class="image is-2by1">
+          <img src="{{item.img}}" style="object-fit: cover;">
+        </figure>
+        <h1 class="title">
+          {{item.title}}
+        </h1>
+        <h2 class="subtitle">
+          {{item.subtitle}}
+        </h2>
+        <small><a [routerLink]="['/detail', item.$key]">Read more...</a></small>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+      </p>
+      <p>
+        <a class="icon" href="https://github.com/jgthms/bulma">
+          <i class="fa fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
