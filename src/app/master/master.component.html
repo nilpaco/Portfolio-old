@@ -1,30 +1,44 @@
 <div mnFullpage [mnFullpageNavigation]="true" [mnFullpageKeyboardScrolling]="true" [mnFullpageSlidesNavigation]="true" [mnFullpageSlidesNavPosition]="bottom">
-  <div class="section welcome-section fp-section fp-table">
+  <div class="welcome-section fp-section fp-table">
     <div class="fp-tableCell">
-      <div class="left">
-        <div class="container">
-          <div class="content">
-            <a class="ajax" data-direction="from-right" href="http://nicolas-bussiere.com/projects/smcp" data-project="smcp">
-              <h2>Project title here</h2>
-              <span class="caption">type of work</span>
-              <span class="arrow"><span class="inner"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></span>
-            </a>
-          </div>
+      <div class="columns is-gapless" style="height: 100%;">
+        <div class="column" style="padding: 1.5rem 0rem 5rem 5rem;"><!-- add height when gets narrow calc(50% - 24.5px) and remove padding -->
+          <section class="hero is-primary is-fullheight content" style="min-height: 100%;">
+            <div class="hero-body has-text-centered">
+              <div class="container">
+                <h1 class="title">
+                  Hero title
+                </h1>
+                <h2 class="subtitle">
+                  Hero subtitle
+                </h2>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
-      <div class="illustrations-container">
-        <div class="illustration">
-          <div class="illustration-inner to-load loaded" style="background-color:#f4f4f4;"><span style="background-image: url(https://s3.amazonaws.com/data.tackk.com/mio/26357928/13907916085242/large.jpg);"></span></div>
+        <div class="column" style="padding: 1.5rem 5rem 5rem 0rem;"><!-- add height when gets narrow calc(50% - 24.5px) and remove padding -->
+          <section class="hero is-warning is-fullheight content" style="min-height: 100%;">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                  Hero title
+                </h1>
+                <h2 class="subtitle">
+                  Hero subtitle
+                </h2>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
   </div>
-  <div class="section install-section fp-section fp-table">
+  <div class="install-section fp-section fp-table">
     <div class="fp-tableCell">
-      <div class="columns is-multiline">
-        <div class="column is-half" *ngFor="let item of items | async">
+      <div class="columns is-multiline" style="height: 100%; padding: 1.5rem 5rem 10rem 5rem;"> <!-- On tablet size add is-gapless and remove padding to add this values padding: 0px 0px 49px 0px -->
+        <div class="column is-half" *ngFor="let item of items | async" style="height: 50%;"> <!-- On mobile height set to 25% -->
           <a [routerLink]="['/detail', item.$key]">
-          <div class="content" [ngStyle]="{'background-image': 'url(' + item.img + ')'}">
+          <div class="cover-img" style="height: 100%;" [ngStyle]="{'background-image': 'url(http://placehold.it/350x150)'}"> <!-- 'url(' + item.img + ')' -->
             <div class="flex">
               <div>
                 <h1>{{item.title}}</h1>
@@ -35,8 +49,10 @@
           </div>
           </a>
         </div>
+        <!--<div class="column has-text-centered">
+            <a class="button" [routerLink]="['/projects']">More projects...</a>
+        </div>-->
       </div>
-      <a class="button" [routerLink]="['/projects']">More projects...</a>
     </div>
   </div>
   <div class="section install-section fp-section fp-table">
