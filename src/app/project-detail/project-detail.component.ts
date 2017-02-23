@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { MnFullpageService } from 'ng2-fullpage';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-project-detail',
@@ -13,8 +13,13 @@ export class ProjectDetailComponent implements OnInit {
 
   item: FirebaseObjectObservable<any>;
 
-  constructor(private location: Location, private fullpageService: MnFullpageService, af: AngularFire, private router: Router) {
-        this.item = af.database.object('/projects');
+  constructor(private location: Location, private fullpageService: MnFullpageService, af: AngularFire, private router: Router, private actvatedRoute: ActivatedRoute) {
+        let projectId;
+        this.actvatedRoute.params.subscribe((params: Params) => {
+          projectId = params['id'];
+        });
+
+        this.item = af.database.object('/projects/' + projectId);
    }
 
   goBack(): void {

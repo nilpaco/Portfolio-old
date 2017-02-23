@@ -1,4 +1,7 @@
 <p>
-  project-detail works!
+  {{(item | async)?.title}}
+</p>
+<p>
+  {{(item | async)?.subtitle}}
 </p>
 <button (click)="goBack()">Back</button>
