@@ -125,7 +125,7 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    /*background-color: red;*/
     -o-background-size: cover;
     background-size: cover;
     background-position: center;
@@ -149,4 +149,73 @@ i {
   .text {
     display: none;
   }
+}
+
+/* First page grid styling and media queries */
+
+/* Set containers heights and paddings */
+.first-page-left {
+  padding: 1.5rem 0rem 5rem 5rem;
+}
+.first-page-right {
+  padding: 1.5rem 5rem 5rem 0rem;
+}
+
+/* On mobile set containers heights to 50% and remove paddings */
+@media (max-width: 768px) {
+  .first-page-container {
+    padding-bottom: 49px;
+  }
+  .first-page-left {
+    padding: 0;
+    height: 50%;
+  }
+  .first-page-right {
+    padding: 0;
+    height: 50%;
+  }
+}
+
+/* Set max height to really large screens */
+@media (min-width: 768px) {
+  .columns.first-page-container {
+    max-height: 800px;
+  }
+}
+
+/* Set max width to really large screens and centered */
+.columns.first-page-container {
+  max-width: 1192px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Second page grid styling and media queries */
+
+/* Set .container and .columns heights and paddings */
+.second-page-container {
+  padding: 1.5rem 5rem 10rem 5rem;
+  height: 100%;
+}
+
+.second-page-container > .columns {
+  height: 50%;
+}
+
+/* In tablet mode remove padding */
+@media (max-width: 999px) {
+    .is-gapless-tablet-only {
+        padding:  0px 0px 49px 0px;
+    }
+    .is-gapless-tablet-only > .column {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* In mobile set to list of 4 with 100% width */
+@media (max-width: 768px) {
+    .is-gapless-tablet-only > .column {
+        height: 25%;
+    }
 }

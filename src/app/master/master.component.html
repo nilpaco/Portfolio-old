@@ -1,8 +1,8 @@
 <div mnFullpage [mnFullpageNavigation]="true" [mnFullpageKeyboardScrolling]="true" [mnFullpageSlidesNavigation]="true" [mnFullpageSlidesNavPosition]="bottom">
   <div class="welcome-section fp-section fp-table">
     <div class="fp-tableCell">
-      <div class="columns is-gapless" style="height: 100%;">
-        <div class="column" style="padding: 1.5rem 0rem 5rem 5rem;"><!-- add height when gets narrow calc(50% - 24.5px) and remove padding -->
+      <div class="columns first-page-container" style="height: 100%;">
+        <div class="first-page-left column"><!-- add height when gets narrow calc(50% - 24.5px) and remove padding -->
           <section class="hero is-primary is-fullheight content" style="min-height: 100%;">
             <div class="hero-body has-text-centered">
               <div class="container">
@@ -16,7 +16,7 @@
             </div>
           </section>
         </div>
-        <div class="column" style="padding: 1.5rem 5rem 5rem 0rem;"><!-- add height when gets narrow calc(50% - 24.5px) and remove padding -->
+        <div class="column first-page-right"><!-- add height when gets narrow calc(50% - 24.5px) and remove padding -->
           <section class="hero is-warning is-fullheight content" style="min-height: 100%;">
             <div class="hero-body">
               <div class="container">
@@ -35,8 +35,8 @@
   </div>
   <div class="install-section fp-section fp-table">
     <div class="fp-tableCell">
-      <div class="columns is-multiline" style="height: 100%; padding: 1.5rem 5rem 10rem 5rem;"> <!-- On tablet size add is-gapless and remove padding to add this values padding: 0px 0px 49px 0px -->
-        <div class="column is-half" *ngFor="let item of items | async" style="height: 50%;"> <!-- On mobile height set to 25% -->
+      <div class="columns second-page-container is-multiline is-gapless-tablet-only"> <!-- On tablet size add is-gapless and remove padding to add this values padding: 0px 0px 49px 0px -->
+        <div class="column is-half" *ngFor="let item of items | async"> <!-- On mobile height set to 25% -->
           <a [routerLink]="['/detail', item.$key]">
           <div class="cover-img" style="height: 100%;" [ngStyle]="{'background-image': 'url(http://placehold.it/350x150)'}"> <!-- 'url(' + item.img + ')' -->
             <div class="flex">
